@@ -1,0 +1,402 @@
+[
+  {
+    "id": "copy",
+    "name": "Copy",
+    "prompt": "Copy the selected cells.",
+    "windows": "ctrl+c",
+    "mac": "cmd+c",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Editing"
+  },
+  {
+    "id": "cut",
+    "name": "Cut",
+    "prompt": "Cut the selected cells.",
+    "windows": "ctrl+x",
+    "mac": "cmd+x",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Editing"
+  },
+  {
+    "id": "paste",
+    "name": "Paste",
+    "prompt": "Paste what you copied.",
+    "windows": "ctrl+v",
+    "mac": "cmd+v",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Editing"
+  },
+  {
+    "id": "undo",
+    "name": "Undo",
+    "prompt": "Undo your last change.",
+    "windows": "ctrl+z",
+    "mac": "cmd+z",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Editing"
+  },
+  {
+    "id": "redo",
+    "name": "Redo",
+    "prompt": "Redo the change you undid.",
+    "windows": "ctrl+y",
+    "mac": "cmd+y",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Editing"
+  },
+  {
+    "id": "fill-down",
+    "name": "Fill down",
+    "prompt": "Copy the top cell down the selection.",
+    "windows": "ctrl+d",
+    "mac": "cmd+d",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Editing"
+  },
+  {
+    "id": "fill-right",
+    "name": "Fill right",
+    "prompt": "Copy the left cell across the selection.",
+    "windows": "ctrl+r",
+    "mac": "cmd+r",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Editing"
+  },
+  {
+    "id": "edit-cell",
+    "name": "Edit the active cell",
+    "prompt": "Start editing the active cell.",
+    "windows": "f2",
+    "mac": "ctrl+u",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Editing"
+  },
+  {
+    "id": "delete-contents",
+    "name": "Clear the cell contents",
+    "prompt": "Clear what is in the selected cells.",
+    "windows": "delete",
+    "mac": "delete",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Editing"
+  },
+  {
+    "id": "cancel-entry",
+    "name": "Cancel an entry",
+    "prompt": "Cancel what you are typing.",
+    "windows": "escape",
+    "mac": "escape",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Editing"
+  },
+  {
+    "id": "fill-selection",
+    "name": "Fill the selection with one entry",
+    "prompt": "Enter the same value in every selected cell.",
+    "windows": "ctrl+enter",
+    "mac": "ctrl+enter",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Editing"
+  },
+  {
+    "id": "insert-date",
+    "name": "Insert today's date",
+    "prompt": "Put today's date in the cell.",
+    "windows": "ctrl+;",
+    "mac": "ctrl+;",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Editing"
+  },
+  {
+    "id": "autosum",
+    "name": "AutoSum",
+    "prompt": "Add a SUM formula for the cells above.",
+    "windows": "alt+=",
+    "mac": "cmd+shift+t",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Formulas"
+  },
+  {
+    "id": "toggle-absolute",
+    "name": "Switch reference type",
+    "prompt": "Cycle a reference between relative and absolute ($).",
+    "windows": "f4",
+    "mac": "cmd+t",
+    "reservedWindows": false,
+    "reservedMac": true,
+    "category": "Formulas"
+  },
+  {
+    "id": "show-formulas",
+    "name": "Show formulas",
+    "prompt": "Show formulas instead of results.",
+    "windows": "ctrl+`",
+    "mac": "ctrl+`",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Formulas"
+  },
+  {
+    "id": "edge-down",
+    "name": "Jump to the last filled cell below",
+    "prompt": "Jump down to the edge of the data.",
+    "windows": "ctrl+down",
+    "mac": "cmd+down",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Moving"
+  },
+  {
+    "id": "edge-up",
+    "name": "Jump to the first filled cell above",
+    "prompt": "Jump up to the edge of the data.",
+    "windows": "ctrl+up",
+    "mac": "cmd+up",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Moving"
+  },
+  {
+    "id": "edge-right",
+    "name": "Jump to the last filled cell on the right",
+    "prompt": "Jump right to the edge of the data.",
+    "windows": "ctrl+right",
+    "mac": "cmd+right",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Moving"
+  },
+  {
+    "id": "edge-left",
+    "name": "Jump to the first filled cell on the left",
+    "prompt": "Jump left to the edge of the data.",
+    "windows": "ctrl+left",
+    "mac": "cmd+left",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Moving"
+  },
+  {
+    "id": "go-a1",
+    "name": "Go to cell A1",
+    "prompt": "Go to the top-left cell.",
+    "windows": "ctrl+home",
+    "mac": "ctrl+home",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Moving"
+  },
+  {
+    "id": "go-last",
+    "name": "Go to the last used cell",
+    "prompt": "Go to the last cell that holds data.",
+    "windows": "ctrl+end",
+    "mac": "ctrl+end",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Moving"
+  },
+  {
+    "id": "next-sheet",
+    "name": "Next sheet",
+    "prompt": "Move to the next sheet.",
+    "windows": "ctrl+pagedown",
+    "mac": "alt+right",
+    "reservedWindows": true,
+    "reservedMac": false,
+    "category": "Moving"
+  },
+  {
+    "id": "prev-sheet",
+    "name": "Previous sheet",
+    "prompt": "Move to the previous sheet.",
+    "windows": "ctrl+pageup",
+    "mac": "alt+left",
+    "reservedWindows": true,
+    "reservedMac": false,
+    "category": "Moving"
+  },
+  {
+    "id": "select-column",
+    "name": "Select the whole column",
+    "prompt": "Select the column of the active cell.",
+    "windows": "ctrl+space",
+    "mac": "ctrl+space",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Selecting"
+  },
+  {
+    "id": "select-row",
+    "name": "Select the whole row",
+    "prompt": "Select the row of the active cell.",
+    "windows": "shift+space",
+    "mac": "shift+space",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Selecting"
+  },
+  {
+    "id": "select-all",
+    "name": "Select all",
+    "prompt": "Select the whole data table.",
+    "windows": "ctrl+a",
+    "mac": "cmd+a",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Selecting"
+  },
+  {
+    "id": "select-to-edge-down",
+    "name": "Select to the last filled cell below",
+    "prompt": "Extend the selection down to the edge of the data.",
+    "windows": "ctrl+shift+down",
+    "mac": "cmd+shift+down",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Selecting"
+  },
+  {
+    "id": "select-to-edge-right",
+    "name": "Select to the last filled cell on the right",
+    "prompt": "Extend the selection right to the edge of the data.",
+    "windows": "ctrl+shift+right",
+    "mac": "cmd+shift+right",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Selecting"
+  },
+  {
+    "id": "bold",
+    "name": "Bold",
+    "prompt": "Make the selected cells bold.",
+    "windows": "ctrl+b",
+    "mac": "cmd+b",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Formatting"
+  },
+  {
+    "id": "italic",
+    "name": "Italic",
+    "prompt": "Make the selected cells italic.",
+    "windows": "ctrl+i",
+    "mac": "cmd+i",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Formatting"
+  },
+  {
+    "id": "underline",
+    "name": "Underline",
+    "prompt": "Underline the selected cells.",
+    "windows": "ctrl+u",
+    "mac": "cmd+u",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Formatting"
+  },
+  {
+    "id": "format-cells",
+    "name": "Format cells",
+    "prompt": "Open the Format Cells box.",
+    "windows": "ctrl+1",
+    "mac": "cmd+1",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Formatting"
+  },
+  {
+    "id": "format-currency",
+    "name": "Currency format",
+    "prompt": "Show the numbers as currency.",
+    "windows": "ctrl+shift+4",
+    "mac": "ctrl+shift+4",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Formatting"
+  },
+  {
+    "id": "format-percent",
+    "name": "Percent format",
+    "prompt": "Show the numbers as percentages.",
+    "windows": "ctrl+shift+5",
+    "mac": "ctrl+shift+5",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Formatting"
+  },
+  {
+    "id": "filter",
+    "name": "Turn filters on or off",
+    "prompt": "Add or remove filter buttons on the table.",
+    "windows": "ctrl+shift+l",
+    "mac": "cmd+shift+f",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Data"
+  },
+  {
+    "id": "find",
+    "name": "Find",
+    "prompt": "Open Find.",
+    "windows": "ctrl+f",
+    "mac": "cmd+f",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Data"
+  },
+  {
+    "id": "save",
+    "name": "Save",
+    "prompt": "Save the workbook.",
+    "windows": "ctrl+s",
+    "mac": "cmd+s",
+    "reservedWindows": false,
+    "reservedMac": false,
+    "category": "Workbook"
+  },
+  {
+    "id": "new-workbook",
+    "name": "New workbook",
+    "prompt": "Open a new blank workbook.",
+    "windows": "ctrl+n",
+    "mac": "cmd+n",
+    "reservedWindows": true,
+    "reservedMac": true,
+    "category": "Workbook"
+  },
+  {
+    "id": "close-workbook",
+    "name": "Close the workbook",
+    "prompt": "Close the workbook.",
+    "windows": "ctrl+w",
+    "mac": "cmd+w",
+    "reservedWindows": true,
+    "reservedMac": true,
+    "category": "Workbook"
+  },
+  {
+    "id": "make-table",
+    "name": "Make a table",
+    "prompt": "Turn the data into a table.",
+    "windows": "ctrl+t",
+    "mac": "cmd+t",
+    "reservedWindows": true,
+    "reservedMac": true,
+    "category": "Data"
+  }
+]
