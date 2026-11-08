@@ -1,0 +1,77 @@
+{
+  "id": "vlookup-exact-01",
+  "module": "lookups",
+  "title": "Fix a lookup that returns the wrong row",
+  "minutes": 3,
+  "teach": "Without FALSE at the end, VLOOKUP looks for the closest match, which is only safe when the first column is sorted. Unsorted data gives wrong answers with no error.",
+  "grid": {
+    "A1": "Code",
+    "B1": "Product",
+    "C1": "Price",
+    "A2": "P104",
+    "B2": "Marker",
+    "C2": 25,
+    "A3": "P101",
+    "B3": "Notebook",
+    "C3": 45,
+    "A4": "P103",
+    "B4": "Folder",
+    "C4": 30,
+    "A5": "P102",
+    "B5": "Stapler",
+    "C5": 85,
+    "E1": "Find code",
+    "E2": "P102",
+    "F1": "Price",
+    "F2": "=VLOOKUP(E2,A2:C5,3)"
+  },
+  "task": "The formula in F2 does not give the price of P102. Fix it so it finds an exact match.",
+  "target": "F2",
+  "check": {
+    "type": "fix",
+    "expectValue": 85,
+    "mustUse": [
+      "VLOOKUP"
+    ]
+  },
+  "hints": [
+    "The formula is missing something at the end.",
+    "FALSE means exact match.",
+    "Try =VLOOKUP(E2,A2:C5,3,FALSE)."
+  ],
+  "explainRules": [
+    "approximate-match"
+  ],
+  "accepted": [
+    "=VLOOKUP(E2,A2:C5,3,FALSE)"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "F2": "=VLOOKUP(E2,A2:C5,3,FALSE)"
+      },
+      {
+        "F2": "=VLOOKUP(E2,A2:C5,3,0)"
+      },
+      {
+        "F2": "=vlookup(e2,a2:c5,3,false)"
+      }
+    ],
+    "wrong": [
+      {},
+      {
+        "F2": "=VLOOKUP(E2,A2:C5,2,FALSE)"
+      },
+      {
+        "F2": "=VLOOKUP(E2,A2:C5,3,TRUE)"
+      },
+      {
+        "F2": 85
+      }
+    ]
+  },
+  "functions": [
+    "VLOOKUP"
+  ]
+}

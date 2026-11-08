@@ -1,0 +1,86 @@
+{
+  "id": "vlookup-basic-01",
+  "module": "lookups",
+  "title": "Look up a price with VLOOKUP",
+  "minutes": 3,
+  "teach": "VLOOKUP finds a value in the first column of a table and returns something from the same row. VLOOKUP(what to find, table, column number, FALSE).",
+  "example": "Example: the 3rd column of A2:C5 is column C, so 3 returns the price.",
+  "grid": {
+    "A1": "Code",
+    "B1": "Product",
+    "C1": "Price",
+    "A2": "P101",
+    "B2": "Notebook",
+    "C2": 45,
+    "A3": "P102",
+    "B3": "Stapler",
+    "C3": 85,
+    "A4": "P103",
+    "B4": "Folder",
+    "C4": 30,
+    "A5": "P104",
+    "B5": "Marker",
+    "C5": 25,
+    "E1": "Find code",
+    "E2": "P103",
+    "F1": "Price"
+  },
+  "task": "In F2, use VLOOKUP to find the price of the code in E2.",
+  "target": "F2",
+  "check": {
+    "type": "formula",
+    "expectValue": 30,
+    "mustUse": [
+      "VLOOKUP"
+    ]
+  },
+  "hints": [
+    "The table is A2:C5; the code is in its first column.",
+    "The price is the 3rd column. End with FALSE for an exact match.",
+    "Try =VLOOKUP(E2,A2:C5,3,FALSE)."
+  ],
+  "explainRules": [
+    "wrong-lookup-column",
+    "approximate-match",
+    "extra-spaces"
+  ],
+  "accepted": [
+    "=VLOOKUP(E2,A2:C5,3,FALSE)",
+    "=VLOOKUP(E2,$A$2:$C$5,3,FALSE)",
+    "=VLOOKUP(E2,A1:C5,3,0)"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "F2": "=VLOOKUP(E2,A2:C5,3,FALSE)"
+      },
+      {
+        "F2": "=vlookup(e2,a2:c5,3,false)"
+      },
+      {
+        "F2": "=VLOOKUP(E2,$A$2:$C$5,3,0)"
+      },
+      {
+        "F2": "=VLOOKUP(\"P103\",A2:C5,3,FALSE)"
+      }
+    ],
+    "wrong": [
+      {
+        "F2": "=VLOOKUP(E2,A2:C5,2,FALSE)"
+      },
+      {
+        "F2": "=VLOOKUP(E2,A2:C5,4,FALSE)"
+      },
+      {
+        "F2": "=VLOOKUP(E2,B2:C5,2,FALSE)"
+      },
+      {
+        "F2": "=C4"
+      }
+    ]
+  },
+  "functions": [
+    "VLOOKUP"
+  ]
+}

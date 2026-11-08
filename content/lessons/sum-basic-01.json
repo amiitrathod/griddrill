@@ -1,0 +1,75 @@
+{
+  "id": "sum-basic-01",
+  "module": "first-formulas",
+  "title": "Total a column with SUM",
+  "minutes": 2,
+  "teach": "SUM adds every number in a range. A range like B2:B5 means from B2 down to B5.",
+  "example": "Example: =SUM(A1:A3) adds A1, A2 and A3.",
+  "grid": {
+    "A1": "Month",
+    "B1": "Sales",
+    "A2": "Jan",
+    "B2": 4200,
+    "A3": "Feb",
+    "B3": 3900,
+    "A4": "Mar",
+    "B4": 5100,
+    "A5": "Apr",
+    "B5": 4800
+  },
+  "task": "In B6, total the four months of sales with SUM.",
+  "target": "B6",
+  "check": {
+    "type": "formula",
+    "expectValue": 18000,
+    "mustUse": [
+      "SUM"
+    ]
+  },
+  "hints": [
+    "Type =SUM( and then drag over the sales.",
+    "The range starts at B2, the first month.",
+    "The formula is =SUM(B2:B5)."
+  ],
+  "explainRules": [
+    "wrong-range"
+  ],
+  "accepted": [
+    "=SUM(B2:B5)",
+    "=sum(b2:b5)",
+    "=SUM(B2,B3,B4,B5)"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "B6": "=SUM(B2:B5)"
+      },
+      {
+        "B6": "=sum(b2:b5)"
+      },
+      {
+        "B6": "=SUM(B2,B3,B4,B5)"
+      },
+      {
+        "B6": "=SUM(B1:B5)"
+      }
+    ],
+    "wrong": [
+      {
+        "B6": "=SUM(B2:B4)"
+      },
+      {
+        "B6": "=B2+B3+B4"
+      },
+      {
+        "B6": "=AVERAGE(B2:B5)"
+      },
+      {}
+    ]
+  },
+  "functions": [
+    "SUM"
+  ],
+  "limit": "SUM skips text, so including the heading B1 still gives the right total. Real Excel behaves the same way."
+}

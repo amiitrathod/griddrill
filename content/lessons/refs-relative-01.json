@@ -1,0 +1,81 @@
+{
+  "id": "refs-relative-01",
+  "module": "references",
+  "title": "Copy a formula down",
+  "minutes": 2,
+  "teach": "When you copy a formula down, its cell references move down with it. That is why one formula can fill a whole column.",
+  "example": "Example: copying =A1*2 from row 1 to row 2 becomes =A2*2.",
+  "grid": {
+    "A1": "Item",
+    "B1": "Price",
+    "C1": "Qty",
+    "D1": "Total",
+    "A2": "Pen",
+    "B2": 12,
+    "C2": 10,
+    "A3": "Ruler",
+    "B3": 15,
+    "C3": 4,
+    "A4": "Folder",
+    "B4": 30,
+    "C4": 6
+  },
+  "task": "In D2, multiply price by quantity. The same formula must also give the right total in D3 and D4 when copied down.",
+  "target": "D2",
+  "check": {
+    "type": "formula",
+    "expectValue": 120,
+    "mustUse": [
+      "=",
+      "ref"
+    ],
+    "alsoCheck": {
+      "D3": 60,
+      "D4": 180
+    }
+  },
+  "hints": [
+    "Use the cells, not the numbers.",
+    "Price is in column B, quantity in column C.",
+    "The formula is =B2*C2."
+  ],
+  "explainRules": [
+    "hardcoded-number",
+    "wrong-operator"
+  ],
+  "accepted": [
+    "=B2*C2",
+    "=C2*B2"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "D2": "=B2*C2"
+      },
+      {
+        "D2": "=C2*B2"
+      },
+      {
+        "D2": "=PRODUCT(B2:C2)"
+      }
+    ],
+    "wrong": [
+      {
+        "D2": "=12*10"
+      },
+      {
+        "D2": "=B2*C3"
+      },
+      {
+        "D2": "=B2*$C$2"
+      },
+      {
+        "D2": "=B2+C2"
+      }
+    ]
+  },
+  "functions": [
+    "PRODUCT"
+  ]
+}

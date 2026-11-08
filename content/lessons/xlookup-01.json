@@ -1,0 +1,75 @@
+{
+  "id": "xlookup-01",
+  "module": "lookups",
+  "title": "Look up with XLOOKUP",
+  "minutes": 3,
+  "teach": "XLOOKUP is the newer lookup: XLOOKUP(what to find, where to look, what to return). No column numbers, and it defaults to an exact match.",
+  "grid": {
+    "A1": "Code",
+    "B1": "Product",
+    "C1": "Price",
+    "A2": "P101",
+    "B2": "Notebook",
+    "C2": 45,
+    "A3": "P102",
+    "B3": "Stapler",
+    "C3": 85,
+    "A4": "P103",
+    "B4": "Folder",
+    "C4": 30,
+    "A5": "P104",
+    "B5": "Marker",
+    "C5": 25,
+    "E1": "Find code",
+    "E2": "P103",
+    "F1": "Price"
+  },
+  "task": "In F2, use XLOOKUP to find the price for the code in E2.",
+  "target": "F2",
+  "check": {
+    "type": "formula",
+    "expectValue": 30,
+    "mustUse": [
+      "XLOOKUP"
+    ]
+  },
+  "hints": [
+    "Look in the code column A2:A5.",
+    "Return from the price column C2:C5.",
+    "Try =XLOOKUP(E2,A2:A5,C2:C5)."
+  ],
+  "explainRules": [],
+  "accepted": [
+    "=XLOOKUP(E2,A2:A5,C2:C5)"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "F2": "=XLOOKUP(E2,A2:A5,C2:C5)"
+      },
+      {
+        "F2": "=xlookup(e2,a2:a5,c2:c5)"
+      },
+      {
+        "F2": "=XLOOKUP(E2,$A$2:$A$5,$C$2:$C$5)"
+      }
+    ],
+    "wrong": [
+      {
+        "F2": "=XLOOKUP(E2,A2:A5,B2:B5)"
+      },
+      {
+        "F2": "=XLOOKUP(E2,C2:C5,A2:A5)"
+      },
+      {
+        "F2": "=VLOOKUP(E2,A2:C5,3,FALSE)"
+      },
+      {}
+    ]
+  },
+  "functions": [
+    "XLOOKUP"
+  ],
+  "limit": "XLOOKUP exists in Excel 2021 and Microsoft 365, not in older versions. Many job tests still use VLOOKUP."
+}
