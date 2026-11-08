@@ -1,0 +1,72 @@
+{
+  "id": "refs-absolute-01",
+  "module": "references",
+  "title": "Lock a cell with $",
+  "minutes": 2,
+  "teach": "When you copy a formula, its cell references move with it. A $ locks the row or column in place.",
+  "example": "Example: $B$1 never moves; B1 moves when copied.",
+  "grid": {
+    "A1": "Tax rate",
+    "B1": 0.18,
+    "A3": "Price",
+    "A4": 100,
+    "A5": 250
+  },
+  "task": "In B4, multiply the price by the tax rate in B1, so the formula still works when copied down to B5.",
+  "target": "B4",
+  "check": {
+    "type": "formula",
+    "expectValue": 18,
+    "mustUse": [
+      "$"
+    ],
+    "alsoCheck": {
+      "B5": 45
+    }
+  },
+  "hints": [
+    "Which cell should never move?",
+    "Put $ before the column letter and row number.",
+    "Try =A4*$B$1."
+  ],
+  "explainRules": [
+    "missing-absolute-ref",
+    "hardcoded-number"
+  ],
+  "accepted": [
+    "=A4*$B$1",
+    "=$B$1*A4"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "B4": "=A4*$B$1"
+      },
+      {
+        "B4": "=$B$1*A4"
+      },
+      {
+        "B4": "=a4*$b$1"
+      },
+      {
+        "B4": "=A4*B$1"
+      }
+    ],
+    "wrong": [
+      {
+        "B4": "=A4*B1"
+      },
+      {
+        "B4": "=A4*0.18"
+      },
+      {
+        "B4": "=A4+$B$1"
+      },
+      {}
+    ]
+  },
+  "functions": [
+    "$"
+  ]
+}

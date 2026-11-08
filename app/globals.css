@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body { @apply bg-page text-ink font-sans; font-size: 16px; line-height: 1.5; }
+  h1, h2, h3 { @apply text-ink; font-weight: 600; line-height: 1.25; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.125rem; }
+  :focus-visible { outline: 2px solid theme("colors.primary"); outline-offset: 2px; }
+  a { @apply text-primary; text-underline-offset: 3px; }
+  p { max-width: 640px; }
+  code, kbd, .mono { @apply font-mono; }
+}
+
+@layer components {
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-control bg-primary text-white font-semibold px-4 border border-primary; min-height: 44px; text-decoration: none; }
+  .btn-primary:hover { filter: brightness(0.92); }
+  .btn-primary:disabled { @apply bg-neutral-300 border-neutral-300 text-neutral-600; filter: none; cursor: not-allowed; }
+  .btn-secondary { @apply inline-flex items-center justify-center gap-2 rounded-control bg-surface text-ink font-semibold px-4 border border-neutral-300; min-height: 44px; text-decoration: none; }
+  .btn-secondary:hover { @apply bg-neutral-100; }
+  .btn-secondary:disabled { @apply text-neutral-400 border-neutral-200; cursor: not-allowed; }
+  .btn-link { @apply inline-flex items-center gap-1 text-primary font-semibold bg-transparent border-0 p-0; text-decoration: underline; text-underline-offset: 3px; min-height: 44px; }
+  .card { @apply bg-surface border border-neutral-200 rounded-card shadow-soft; }
+  .input { @apply w-full rounded-control border border-neutral-300 bg-surface text-ink px-2; min-height: 44px; }
+  .label { @apply block text-sm font-semibold text-neutral-700 mb-1; }
+  .fade-in { animation: fade 180ms ease-out; }
+}
+
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

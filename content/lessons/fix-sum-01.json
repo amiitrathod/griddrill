@@ -1,0 +1,70 @@
+{
+  "id": "fix-sum-01",
+  "module": "first-formulas",
+  "title": "Fix a formula that misses a row",
+  "minutes": 2,
+  "teach": "A formula can run without an error and still be wrong. A very common cause is a range that stops one row too early.",
+  "grid": {
+    "A1": "Region",
+    "B1": "Revenue",
+    "A2": "North",
+    "B2": 5400,
+    "A3": "South",
+    "B3": 4700,
+    "A4": "East",
+    "B4": 6100,
+    "A5": "West",
+    "B5": 5200,
+    "A6": "Total",
+    "B6": "=SUM(B2:B4)"
+  },
+  "task": "The total in B6 leaves out a region. Fix the formula so it adds all four.",
+  "target": "B6",
+  "check": {
+    "type": "fix",
+    "expectValue": 21400,
+    "mustUse": [
+      "SUM"
+    ]
+  },
+  "hints": [
+    "Click B6 and look at the range in the formula bar.",
+    "The data runs from B2 to B5.",
+    "Change it to =SUM(B2:B5)."
+  ],
+  "explainRules": [
+    "wrong-range"
+  ],
+  "accepted": [
+    "=SUM(B2:B5)"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "B6": "=SUM(B2:B5)"
+      },
+      {
+        "B6": "=sum(b2:b5)"
+      },
+      {
+        "B6": "=SUM(B2:B3,B4:B5)"
+      }
+    ],
+    "wrong": [
+      {},
+      {
+        "B6": "=SUM(B3:B5)"
+      },
+      {
+        "B6": "=SUM(B2:B4)+B3"
+      },
+      {
+        "B6": "=B2+B3+B4"
+      }
+    ]
+  },
+  "functions": [
+    "SUM"
+  ]
+}

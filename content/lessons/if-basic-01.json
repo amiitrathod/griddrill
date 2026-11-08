@@ -1,0 +1,75 @@
+{
+  "id": "if-basic-01",
+  "module": "logic",
+  "title": "Decide with IF",
+  "minutes": 2,
+  "teach": "IF asks a yes/no question and gives one answer for yes, another for no: IF(question, if yes, if no). Text answers go in quotes.",
+  "example": "Example: =IF(A1>10,\"Big\",\"Small\") shows Big when A1 is above 10.",
+  "grid": {
+    "A1": "Student",
+    "B1": "Marks",
+    "C1": "Result",
+    "A2": "Asha",
+    "B2": 72,
+    "A3": "Dev",
+    "B3": 40,
+    "A4": "Ira",
+    "B4": 38
+  },
+  "task": "In C2, show \"Pass\" when the marks in B2 are 40 or more, otherwise \"Fail\". It must also work when copied to C3 and C4.",
+  "target": "C2",
+  "check": {
+    "type": "formula",
+    "expectValue": "Pass",
+    "mustUse": [
+      "IF"
+    ],
+    "alsoCheck": {
+      "C3": "Pass",
+      "C4": "Fail"
+    }
+  },
+  "hints": [
+    "The question is whether B2 is 40 or more.",
+    ">= means 'greater than or equal to'.",
+    "Try =IF(B2>=40,\"Pass\",\"Fail\")."
+  ],
+  "explainRules": [
+    "error-value"
+  ],
+  "accepted": [
+    "=IF(B2>=40,\"Pass\",\"Fail\")",
+    "=IF(B2>39,\"Pass\",\"Fail\")"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "C2": "=IF(B2>=40,\"Pass\",\"Fail\")"
+      },
+      {
+        "C2": "=if(b2>=40,\"pass\",\"fail\")"
+      },
+      {
+        "C2": "=IF(B2>39,\"Pass\",\"Fail\")"
+      }
+    ],
+    "wrong": [
+      {
+        "C2": "=IF(B2>40,\"Pass\",\"Fail\")"
+      },
+      {
+        "C2": "=IF(B2>=40,\"Fail\",\"Pass\")"
+      },
+      {
+        "C2": "Pass"
+      },
+      {
+        "C2": "=IF(B2>=40,Pass,Fail)"
+      }
+    ]
+  },
+  "functions": [
+    "IF"
+  ]
+}

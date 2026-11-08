@@ -1,0 +1,73 @@
+{
+  "id": "count-01",
+  "module": "first-formulas",
+  "title": "Count numbers with COUNT",
+  "minutes": 2,
+  "teach": "COUNT tells you how many cells hold a number. Text and blanks are not counted.",
+  "example": "Example: =COUNT(A1:A3) over 5, the word hello and 9 shows 2.",
+  "grid": {
+    "A1": "Invoice",
+    "B1": "Amount",
+    "A2": "INV-101",
+    "B2": 1500,
+    "A3": "INV-102",
+    "B3": "Pending",
+    "A4": "INV-103",
+    "B4": 2200,
+    "A5": "INV-104",
+    "B5": 980,
+    "A6": "INV-105",
+    "B6": "Pending"
+  },
+  "task": "In B7, count how many invoices already have an amount.",
+  "target": "B7",
+  "check": {
+    "type": "formula",
+    "expectValue": 3,
+    "mustUse": [
+      "COUNT"
+    ]
+  },
+  "hints": [
+    "Some cells say Pending, which is text.",
+    "COUNT skips text, which is what you want here.",
+    "The formula is =COUNT(B2:B6)."
+  ],
+  "explainRules": [
+    "wrong-range",
+    "wrong-function"
+  ],
+  "accepted": [
+    "=COUNT(B2:B6)"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "B7": "=COUNT(B2:B6)"
+      },
+      {
+        "B7": "=count(b2:b6)"
+      },
+      {
+        "B7": "=COUNT(B1:B6)"
+      }
+    ],
+    "wrong": [
+      {
+        "B7": "=COUNTA(B2:B6)"
+      },
+      {
+        "B7": "=COUNT(A2:A6)"
+      },
+      {
+        "B7": "=SUM(B2:B6)"
+      },
+      {}
+    ]
+  },
+  "functions": [
+    "COUNT"
+  ],
+  "limit": "COUNTA, which counts every non-empty cell, is a different function."
+}

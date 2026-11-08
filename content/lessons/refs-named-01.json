@@ -1,0 +1,63 @@
+{
+  "id": "refs-named-01",
+  "module": "references",
+  "title": "Name a range",
+  "minutes": 2,
+  "teach": "A named range gives a block of cells a name you can use in formulas. Select the cells and type a name in the Name Box, left of the formula bar.",
+  "grid": {
+    "A1": "Sales (Rs)",
+    "A2": 4200,
+    "A3": 3900,
+    "A4": 5100
+  },
+  "task": "The cells A2:A4 have been named Sales. Which formula adds them using that name?",
+  "target": "A1",
+  "check": {
+    "type": "quick",
+    "choices": [
+      "=SUM(Sales)",
+      "=SUM(\"Sales\")",
+      "=Sales.SUM()",
+      "=TOTAL(Sales)"
+    ],
+    "correct": 0
+  },
+  "hints": [
+    "A name works like a range.",
+    "Names are not put in quotes.",
+    "SUM is the function that adds."
+  ],
+  "explainRules": [],
+  "accepted": [
+    "=SUM(Sales)"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "__choice": 0
+      },
+      {
+        "__choice": 0
+      },
+      {
+        "__choice": 0
+      }
+    ],
+    "wrong": [
+      {
+        "__choice": 1
+      },
+      {
+        "__choice": 2
+      },
+      {
+        "__choice": 3
+      }
+    ]
+  },
+  "functions": [
+    "SUM"
+  ],
+  "limit": "Gridwise does not let you create names yet, so this lesson is a quick check. In real Excel you name a range in the Name Box."
+}

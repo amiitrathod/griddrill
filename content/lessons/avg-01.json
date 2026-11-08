@@ -1,0 +1,69 @@
+{
+  "id": "avg-01",
+  "module": "first-formulas",
+  "title": "Find the mean with AVERAGE",
+  "minutes": 2,
+  "teach": "AVERAGE adds the numbers and divides by how many there are. It answers: what is a typical value?",
+  "example": "Example: =AVERAGE(A1:A2) with 4 and 6 shows 5.",
+  "grid": {
+    "A1": "Student",
+    "B1": "Marks",
+    "A2": "Asha",
+    "B2": 72,
+    "A3": "Dev",
+    "B3": 65,
+    "A4": "Ira",
+    "B4": 88,
+    "A5": "Kabir",
+    "B5": 79
+  },
+  "task": "In B6, find the average mark of the four students with AVERAGE.",
+  "target": "B6",
+  "check": {
+    "type": "formula",
+    "expectValue": 76,
+    "mustUse": [
+      "AVERAGE"
+    ]
+  },
+  "hints": [
+    "Type =AVERAGE( and drag over the marks.",
+    "Include all four students.",
+    "The formula is =AVERAGE(B2:B5)."
+  ],
+  "explainRules": [
+    "wrong-range"
+  ],
+  "accepted": [
+    "=AVERAGE(B2:B5)"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "B6": "=AVERAGE(B2:B5)"
+      },
+      {
+        "B6": "=average(b2:b5)"
+      },
+      {
+        "B6": "=AVERAGE(B2,B3,B4,B5)"
+      }
+    ],
+    "wrong": [
+      {
+        "B6": "=SUM(B2:B5)"
+      },
+      {
+        "B6": "=AVERAGE(B2:B4)"
+      },
+      {
+        "B6": "=MAX(B2:B5)"
+      },
+      {}
+    ]
+  },
+  "functions": [
+    "AVERAGE"
+  ]
+}

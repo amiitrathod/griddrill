@@ -1,0 +1,52 @@
+{
+  "id": "cells-number-01",
+  "module": "getting-around",
+  "title": "Type a number into a cell",
+  "minutes": 2,
+  "teach": "A spreadsheet is a grid of cells. Click a cell, type, and press Enter to store what you typed.",
+  "grid": {
+    "A1": "Item",
+    "B1": "Units sold"
+  },
+  "task": "In B2, type the number 250 and press Enter.",
+  "target": "B2",
+  "check": {
+    "type": "formula",
+    "expectValue": 250
+  },
+  "hints": [
+    "Click cell B2 once.",
+    "Type 250 with no letters or spaces.",
+    "Press Enter to confirm."
+  ],
+  "explainRules": [],
+  "accepted": [
+    "250"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "B2": 250
+      },
+      {
+        "B2": "250"
+      },
+      {
+        "B2": "250.0"
+      }
+    ],
+    "wrong": [
+      {
+        "B2": "two fifty"
+      },
+      {
+        "B2": 25
+      },
+      {
+        "B2": "'250"
+      },
+      {}
+    ]
+  }
+}

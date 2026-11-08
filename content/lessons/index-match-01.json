@@ -1,0 +1,81 @@
+{
+  "id": "index-match-01",
+  "module": "lookups",
+  "title": "Combine INDEX and MATCH",
+  "minutes": 3,
+  "teach": "MATCH finds the row, INDEX returns the value from that row. Together they do what VLOOKUP does, and can look to the left.",
+  "example": "Example: =INDEX(C2:C5,MATCH(E2,A2:A5,0)).",
+  "grid": {
+    "A1": "Code",
+    "B1": "Product",
+    "C1": "Price",
+    "A2": "P101",
+    "B2": "Notebook",
+    "C2": 45,
+    "A3": "P102",
+    "B3": "Stapler",
+    "C3": 85,
+    "A4": "P103",
+    "B4": "Folder",
+    "C4": 30,
+    "A5": "P104",
+    "B5": "Marker",
+    "C5": 25,
+    "E1": "Find code",
+    "E2": "P103",
+    "F1": "Price"
+  },
+  "task": "In F2, return the price for the code in E2 by putting MATCH inside INDEX.",
+  "target": "F2",
+  "check": {
+    "type": "formula",
+    "expectValue": 30,
+    "mustUse": [
+      "INDEX",
+      "MATCH"
+    ]
+  },
+  "hints": [
+    "INDEX returns from the price column C2:C5.",
+    "Its position comes from MATCH(E2,A2:A5,0).",
+    "Try =INDEX(C2:C5,MATCH(E2,A2:A5,0))."
+  ],
+  "explainRules": [
+    "wrong-function"
+  ],
+  "accepted": [
+    "=INDEX(C2:C5,MATCH(E2,A2:A5,0))"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "F2": "=INDEX(C2:C5,MATCH(E2,A2:A5,0))"
+      },
+      {
+        "F2": "=index(c2:c5,match(e2,a2:a5,0))"
+      },
+      {
+        "F2": "=INDEX($C$2:$C$5,MATCH(E2,$A$2:$A$5,0))"
+      }
+    ],
+    "wrong": [
+      {
+        "F2": "=INDEX(C2:C5,MATCH(E2,A2:A5,0)+1)"
+      },
+      {
+        "F2": "=INDEX(B2:B5,MATCH(E2,A2:A5,0))"
+      },
+      {
+        "F2": "=VLOOKUP(E2,A2:C5,3,FALSE)"
+      },
+      {
+        "F2": "=INDEX(C2:C5,3)"
+      }
+    ]
+  },
+  "functions": [
+    "INDEX",
+    "MATCH"
+  ]
+}

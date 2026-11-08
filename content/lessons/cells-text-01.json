@@ -1,0 +1,51 @@
+{
+  "id": "cells-text-01",
+  "module": "getting-around",
+  "title": "Type text into a cell",
+  "minutes": 2,
+  "teach": "Anything that is not a number is text. Text lines up on the left of the cell; numbers line up on the right.",
+  "grid": {
+    "A1": "Product"
+  },
+  "task": "In A2, type the product name Notebook and press Enter.",
+  "target": "A2",
+  "check": {
+    "type": "formula",
+    "expectValue": "Notebook"
+  },
+  "hints": [
+    "Click cell A2.",
+    "Type the word Notebook.",
+    "Press Enter."
+  ],
+  "explainRules": [],
+  "accepted": [
+    "Notebook"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "A2": "Notebook"
+      },
+      {
+        "A2": "notebook"
+      },
+      {
+        "A2": "Notebook "
+      }
+    ],
+    "wrong": [
+      {
+        "A2": "Notebooks"
+      },
+      {
+        "A2": "Note book"
+      },
+      {
+        "A2": "Pen"
+      },
+      {}
+    ]
+  }
+}

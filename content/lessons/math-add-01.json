@@ -1,0 +1,69 @@
+{
+  "id": "math-add-01",
+  "module": "first-formulas",
+  "title": "Add with a formula",
+  "minutes": 2,
+  "teach": "A formula starts with =. Instead of typing the numbers, point to the cells that hold them, so the answer updates when the data changes.",
+  "example": "Example: with 3 in A1 and 4 in A2, =A1+A2 shows 7.",
+  "grid": {
+    "A1": "Rent",
+    "B1": 1200,
+    "A2": "Power",
+    "B2": 180
+  },
+  "task": "In B3, add the rent and the power bill using their cell references.",
+  "target": "B3",
+  "check": {
+    "type": "formula",
+    "expectValue": 1380,
+    "mustUse": [
+      "=",
+      "ref"
+    ]
+  },
+  "hints": [
+    "Start the cell with =.",
+    "Click B1, type +, then click B2.",
+    "The formula is =B1+B2."
+  ],
+  "explainRules": [
+    "wrong-operator",
+    "hardcoded-number"
+  ],
+  "accepted": [
+    "=B1+B2",
+    "=B2+B1",
+    "=SUM(B1:B2)"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "B3": "=B1+B2"
+      },
+      {
+        "B3": "=b1+b2"
+      },
+      {
+        "B3": "=SUM(B1:B2)"
+      }
+    ],
+    "wrong": [
+      {
+        "B3": 1380
+      },
+      {
+        "B3": "=1200+180"
+      },
+      {
+        "B3": "=B1-B2"
+      },
+      {
+        "B3": "=B1*B2"
+      }
+    ]
+  },
+  "functions": [
+    "+"
+  ]
+}

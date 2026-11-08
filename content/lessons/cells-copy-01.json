@@ -1,0 +1,53 @@
+{
+  "id": "cells-copy-01",
+  "module": "getting-around",
+  "title": "Copy and paste a cell",
+  "minutes": 2,
+  "teach": "Copy makes a duplicate and leaves the original where it is. Press Ctrl+C on a selected cell, click the destination, then press Ctrl+V.",
+  "grid": {
+    "A1": "Rate",
+    "B1": 0.18
+  },
+  "task": "Copy the rate in B1 into D1.",
+  "target": "D1",
+  "check": {
+    "type": "formula",
+    "expectValue": 0.18
+  },
+  "hints": [
+    "Click B1 so it is selected.",
+    "Press Ctrl+C (or the Copy button), then click D1.",
+    "Press Ctrl+V (or the Paste button)."
+  ],
+  "explainRules": [],
+  "accepted": [
+    "0.18"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "D1": 0.18
+      },
+      {
+        "D1": "0.18"
+      },
+      {
+        "D1": "=B1"
+      }
+    ],
+    "wrong": [
+      {
+        "D1": 18
+      },
+      {
+        "D1": 0.81
+      },
+      {
+        "D1": "Rate"
+      },
+      {}
+    ]
+  },
+  "limit": "Copy and paste work inside Gridwise. Copying between Gridwise and real Excel is not supported."
+}

@@ -1,0 +1,71 @@
+{
+  "id": "math-multiply-01",
+  "module": "first-formulas",
+  "title": "Multiply cells",
+  "minutes": 2,
+  "teach": "Excel uses * for multiply and / for divide. A line total is price times quantity.",
+  "example": "Example: with 5 in A1 and 3 in A2, =A1*A2 shows 15.",
+  "grid": {
+    "A1": "Item",
+    "B1": "Price",
+    "C1": "Qty",
+    "A2": "Stapler",
+    "B2": 85,
+    "C2": 6
+  },
+  "task": "In D2, work out the line total: price times quantity.",
+  "target": "D2",
+  "check": {
+    "type": "formula",
+    "expectValue": 510,
+    "mustUse": [
+      "=",
+      "ref"
+    ]
+  },
+  "hints": [
+    "Start with =.",
+    "Click the price cell, type *, then click the quantity cell.",
+    "The formula is =B2*C2."
+  ],
+  "explainRules": [
+    "wrong-operator",
+    "hardcoded-number"
+  ],
+  "accepted": [
+    "=B2*C2",
+    "=C2*B2",
+    "=PRODUCT(B2:C2)"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "D2": "=B2*C2"
+      },
+      {
+        "D2": "=C2*B2"
+      },
+      {
+        "D2": "=PRODUCT(B2:C2)"
+      }
+    ],
+    "wrong": [
+      {
+        "D2": "=B2+C2"
+      },
+      {
+        "D2": 510
+      },
+      {
+        "D2": "=B2/C2"
+      },
+      {
+        "D2": "=85*6"
+      }
+    ]
+  },
+  "functions": [
+    "PRODUCT"
+  ]
+}

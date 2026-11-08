@@ -1,0 +1,69 @@
+{
+  "id": "max-01",
+  "module": "first-formulas",
+  "title": "Find the highest with MAX",
+  "minutes": 2,
+  "teach": "MAX returns the largest number in a range. It is the mirror of MIN.",
+  "example": "Example: =MAX(A1:A3) with 8, 3 and 5 shows 8.",
+  "grid": {
+    "A1": "Rep",
+    "B1": "Deals",
+    "A2": "Neha",
+    "B2": 14,
+    "A3": "Omar",
+    "B3": 9,
+    "A4": "Priya",
+    "B4": 17,
+    "A5": "Quinn",
+    "B5": 12
+  },
+  "task": "In B6, find the most deals closed by one rep with MAX.",
+  "target": "B6",
+  "check": {
+    "type": "formula",
+    "expectValue": 17,
+    "mustUse": [
+      "MAX"
+    ]
+  },
+  "hints": [
+    "Type =MAX( and drag over the deals.",
+    "MAX gives the largest number.",
+    "The formula is =MAX(B2:B5)."
+  ],
+  "explainRules": [
+    "wrong-range"
+  ],
+  "accepted": [
+    "=MAX(B2:B5)"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "B6": "=MAX(B2:B5)"
+      },
+      {
+        "B6": "=max(b2:b5)"
+      },
+      {
+        "B6": "=MAX(B1:B5)"
+      }
+    ],
+    "wrong": [
+      {
+        "B6": "=MIN(B2:B5)"
+      },
+      {
+        "B6": "=MAX(B2:B3)"
+      },
+      {
+        "B6": "=SUM(B2:B5)"
+      },
+      {}
+    ]
+  },
+  "functions": [
+    "MAX"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "if-nested-01",
+  "module": "logic",
+  "title": "Chain choices with nested IF",
+  "minutes": 3,
+  "teach": "An IF can sit inside another IF to handle more than two outcomes. Test the strictest condition first.",
+  "grid": {
+    "A1": "Student",
+    "B1": "Marks",
+    "C1": "Grade",
+    "A2": "Asha",
+    "B2": 92,
+    "A3": "Dev",
+    "B3": 78,
+    "A4": "Ira",
+    "B4": 55,
+    "A5": "Jay",
+    "B5": 34
+  },
+  "task": "In C2, give grade \"A\" for 90 or more, \"B\" for 70 or more, \"C\" for 50 or more, otherwise \"D\". It must work when copied down.",
+  "target": "C2",
+  "check": {
+    "type": "formula",
+    "expectValue": "A",
+    "mustUse": [
+      "IF"
+    ],
+    "alsoCheck": {
+      "C3": "B",
+      "C4": "C",
+      "C5": "D"
+    }
+  },
+  "hints": [
+    "Start with the highest grade: B2>=90.",
+    "The 'no' part of the first IF is another IF.",
+    "=IF(B2>=90,\"A\",IF(B2>=70,\"B\",IF(B2>=50,\"C\",\"D\")))"
+  ],
+  "explainRules": [],
+  "accepted": [
+    "=IF(B2>=90,\"A\",IF(B2>=70,\"B\",IF(B2>=50,\"C\",\"D\")))"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "C2": "=IF(B2>=90,\"A\",IF(B2>=70,\"B\",IF(B2>=50,\"C\",\"D\")))"
+      },
+      {
+        "C2": "=if(b2>=90,\"a\",if(b2>=70,\"b\",if(b2>=50,\"c\",\"d\")))"
+      },
+      {
+        "C2": "=IF(B2<50,\"D\",IF(B2<70,\"C\",IF(B2<90,\"B\",\"A\")))"
+      }
+    ],
+    "wrong": [
+      {
+        "C2": "=IF(B2>=90,\"A\",\"B\")"
+      },
+      {
+        "C2": "=IF(B2>=50,\"C\",IF(B2>=70,\"B\",IF(B2>=90,\"A\",\"D\")))"
+      },
+      {
+        "C2": "=IF(B2>=90,\"A\",IF(B2>=70,\"B\",\"C\"))"
+      },
+      {}
+    ]
+  },
+  "functions": [
+    "IF"
+  ]
+}

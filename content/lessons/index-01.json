@@ -1,0 +1,79 @@
+{
+  "id": "index-01",
+  "module": "lookups",
+  "title": "Pick by position with INDEX",
+  "minutes": 2,
+  "teach": "INDEX returns the item at a position in a range. INDEX(range, position) counts from 1.",
+  "example": "Example: =INDEX(A1:A3,2) returns the second cell, A2.",
+  "grid": {
+    "A1": "Code",
+    "B1": "Product",
+    "C1": "Price",
+    "A2": "P101",
+    "B2": "Notebook",
+    "C2": 45,
+    "A3": "P102",
+    "B3": "Stapler",
+    "C3": 85,
+    "A4": "P103",
+    "B4": "Folder",
+    "C4": 30,
+    "A5": "P104",
+    "B5": "Marker",
+    "C5": 25
+  },
+  "task": "In F2, use INDEX to return the price in the 3rd row of the price column C2:C5.",
+  "target": "F2",
+  "check": {
+    "type": "formula",
+    "expectValue": 30,
+    "mustUse": [
+      "INDEX"
+    ]
+  },
+  "hints": [
+    "The range is the price column C2:C5.",
+    "Position 3 is the third cell of that range.",
+    "Try =INDEX(C2:C5,3)."
+  ],
+  "explainRules": [
+    "wrong-range"
+  ],
+  "accepted": [
+    "=INDEX(C2:C5,3)"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "F2": "=INDEX(C2:C5,3)"
+      },
+      {
+        "F2": "=index(c2:c5,3)"
+      },
+      {
+        "F2": "=INDEX(C1:C5,4)"
+      },
+      {
+        "F2": "=INDEX(C2:C5,3,1)"
+      }
+    ],
+    "wrong": [
+      {
+        "F2": "=INDEX(C2:C5,2)"
+      },
+      {
+        "F2": "=INDEX(B2:B5,3)"
+      },
+      {
+        "F2": "=C4"
+      },
+      {
+        "F2": "=INDEX(C2:C5,4)"
+      }
+    ]
+  },
+  "functions": [
+    "INDEX"
+  ]
+}

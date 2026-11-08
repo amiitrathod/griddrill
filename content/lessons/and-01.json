@@ -1,0 +1,82 @@
+{
+  "id": "and-01",
+  "module": "logic",
+  "title": "Require both with AND",
+  "minutes": 2,
+  "teach": "AND is true only when every condition inside it is true. Put it inside IF to ask two questions at once.",
+  "example": "Example: =IF(AND(A1>5,B1>5),\"Both\",\"No\").",
+  "grid": {
+    "A1": "Candidate",
+    "B1": "Marks",
+    "C1": "Attendance %",
+    "D1": "Eligible",
+    "A2": "Asha",
+    "B2": 72,
+    "C2": 90,
+    "A3": "Dev",
+    "B3": 81,
+    "C3": 60,
+    "A4": "Ira",
+    "B4": 60,
+    "C4": 75,
+    "A5": "Jay",
+    "B5": 55,
+    "C5": 95
+  },
+  "task": "In D2, show \"Yes\" only when marks are at least 60 AND attendance is at least 75, otherwise \"No\". It must work when copied down.",
+  "target": "D2",
+  "check": {
+    "type": "formula",
+    "expectValue": "Yes",
+    "mustUse": [
+      "IF",
+      "AND"
+    ],
+    "alsoCheck": {
+      "D3": "No",
+      "D4": "Yes",
+      "D5": "No"
+    }
+  },
+  "hints": [
+    "Two conditions go inside AND, separated by a comma.",
+    "Marks: B2>=60. Attendance: C2>=75.",
+    "Try =IF(AND(B2>=60,C2>=75),\"Yes\",\"No\")."
+  ],
+  "explainRules": [
+    "wrong-function"
+  ],
+  "accepted": [
+    "=IF(AND(B2>=60,C2>=75),\"Yes\",\"No\")"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "D2": "=IF(AND(B2>=60,C2>=75),\"Yes\",\"No\")"
+      },
+      {
+        "D2": "=if(and(b2>=60,c2>=75),\"yes\",\"no\")"
+      },
+      {
+        "D2": "=IF(AND(C2>=75,B2>=60),\"Yes\",\"No\")"
+      }
+    ],
+    "wrong": [
+      {
+        "D2": "=IF(B2>=60,\"Yes\",\"No\")"
+      },
+      {
+        "D2": "=IF(OR(B2>=60,C2>=75),\"Yes\",\"No\")"
+      },
+      {
+        "D2": "=IF(AND(B2>60,C2>75),\"Yes\",\"No\")"
+      },
+      {}
+    ]
+  },
+  "functions": [
+    "AND",
+    "IF"
+  ]
+}

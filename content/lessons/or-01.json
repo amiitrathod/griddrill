@@ -1,0 +1,78 @@
+{
+  "id": "or-01",
+  "module": "logic",
+  "title": "Accept either with OR",
+  "minutes": 2,
+  "teach": "OR is true when at least one condition inside it is true. It is more generous than AND.",
+  "example": "Example: =IF(OR(A1=\"Yes\",B1=\"Yes\"),\"Go\",\"Stop\").",
+  "grid": {
+    "A1": "Order",
+    "B1": "Priority",
+    "C1": "Value",
+    "D1": "Ship today",
+    "A2": "#4001",
+    "B2": "High",
+    "C2": 900,
+    "A3": "#4002",
+    "B3": "Low",
+    "C3": 15000,
+    "A4": "#4003",
+    "B4": "Low",
+    "C4": 700
+  },
+  "task": "In D2, show \"Yes\" when the priority is High OR the value is over 10000, otherwise \"No\". It must work when copied down.",
+  "target": "D2",
+  "check": {
+    "type": "formula",
+    "expectValue": "Yes",
+    "mustUse": [
+      "IF",
+      "OR"
+    ],
+    "alsoCheck": {
+      "D3": "Yes",
+      "D4": "No"
+    }
+  },
+  "hints": [
+    "Two conditions go inside OR.",
+    "Text in a formula needs quotes: B2=\"High\".",
+    "Try =IF(OR(B2=\"High\",C2>10000),\"Yes\",\"No\")."
+  ],
+  "explainRules": [
+    "wrong-function"
+  ],
+  "accepted": [
+    "=IF(OR(B2=\"High\",C2>10000),\"Yes\",\"No\")"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "D2": "=IF(OR(B2=\"High\",C2>10000),\"Yes\",\"No\")"
+      },
+      {
+        "D2": "=IF(OR(B2=\"high\",C2>10000),\"Yes\",\"No\")"
+      },
+      {
+        "D2": "=IF(OR(C2>10000,B2=\"High\"),\"Yes\",\"No\")"
+      }
+    ],
+    "wrong": [
+      {
+        "D2": "=IF(AND(B2=\"High\",C2>10000),\"Yes\",\"No\")"
+      },
+      {
+        "D2": "=IF(B2=\"High\",\"Yes\",\"No\")"
+      },
+      {
+        "D2": "=IF(OR(B2=\"High\",C2>10000),\"No\",\"Yes\")"
+      },
+      {}
+    ]
+  },
+  "functions": [
+    "OR",
+    "IF"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "cells-fill-01",
+  "module": "getting-around",
+  "title": "Enter data down a column",
+  "minutes": 2,
+  "teach": "Data goes one value per cell, one cell under the other. Press Enter after each value and the selection moves down for you.",
+  "grid": {
+    "A1": "Day"
+  },
+  "task": "Type Mon, Tue and Wed into A2, A3 and A4.",
+  "target": "A2",
+  "check": {
+    "type": "range",
+    "expect": {
+      "A2": "Mon",
+      "A3": "Tue",
+      "A4": "Wed"
+    }
+  },
+  "hints": [
+    "Click A2 and type Mon.",
+    "Press Enter: the selection drops to A3.",
+    "Type Tue, Enter, then Wed."
+  ],
+  "explainRules": [],
+  "accepted": [
+    "Mon"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "A2": "Mon",
+        "A3": "Tue",
+        "A4": "Wed"
+      },
+      {
+        "A2": "mon",
+        "A3": "tue",
+        "A4": "wed"
+      },
+      {
+        "A2": "Mon ",
+        "A3": "Tue",
+        "A4": "Wed"
+      }
+    ],
+    "wrong": [
+      {
+        "A2": "Mon",
+        "A3": "Wed",
+        "A4": "Tue"
+      },
+      {
+        "A2": "Mon"
+      },
+      {
+        "A2": "Monday",
+        "A3": "Tuesday",
+        "A4": "Wednesday"
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "iferror-01",
+  "module": "logic",
+  "title": "Handle errors with IFERROR",
+  "minutes": 2,
+  "teach": "IFERROR shows your own message when a formula would produce an error. IFERROR(formula, what to show instead).",
+  "example": "Example: =IFERROR(10/0,\"n/a\") shows n/a instead of #DIV/0!.",
+  "grid": {
+    "A1": "Item",
+    "B1": "Sold",
+    "C1": "Target",
+    "D1": "Share of target",
+    "A2": "Pens",
+    "B2": 80,
+    "C2": 100,
+    "A3": "Files",
+    "B3": 45,
+    "C3": 0,
+    "A4": "Tape",
+    "B4": 30,
+    "C4": 60
+  },
+  "task": "In D2, divide sold by target. When the division fails, show \"n/a\" instead of the error. It must work when copied down.",
+  "target": "D2",
+  "check": {
+    "type": "formula",
+    "expectValue": 0.8,
+    "mustUse": [
+      "IFERROR"
+    ],
+    "alsoCheck": {
+      "D3": "n/a",
+      "D4": 0.5
+    }
+  },
+  "hints": [
+    "The division is B2/C2.",
+    "Wrap it: IFERROR(division, \"n/a\").",
+    "Try =IFERROR(B2/C2,\"n/a\")."
+  ],
+  "explainRules": [
+    "wrong-function",
+    "error-value"
+  ],
+  "accepted": [
+    "=IFERROR(B2/C2,\"n/a\")"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "D2": "=IFERROR(B2/C2,\"n/a\")"
+      },
+      {
+        "D2": "=iferror(b2/c2,\"n/a\")"
+      },
+      {
+        "D2": "=IFERROR(B2/C2,\"N/A\")"
+      }
+    ],
+    "wrong": [
+      {
+        "D2": "=B2/C2"
+      },
+      {
+        "D2": "=IFERROR(B2/C2,0)"
+      },
+      {
+        "D2": "=IF(C2=0,\"n/a\",B2/C2)"
+      },
+      {}
+    ]
+  },
+  "functions": [
+    "IFERROR"
+  ]
+}

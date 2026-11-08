@@ -1,0 +1,73 @@
+{
+  "id": "refs-mixed-01",
+  "module": "references",
+  "title": "Lock only the row or the column",
+  "minutes": 2,
+  "teach": "$ can lock just one part. $A2 keeps column A fixed but lets the row move; B$1 keeps row 1 fixed but lets the column move.",
+  "example": "Example: a times table needs both: =$A2*B$1.",
+  "grid": {
+    "A1": "x",
+    "B1": 2,
+    "C1": 3,
+    "D1": 4,
+    "A2": 10,
+    "A3": 20
+  },
+  "task": "In B2, multiply the number in column A by the number in row 1. One formula must work when copied across to D2 and down to row 3.",
+  "target": "B2",
+  "check": {
+    "type": "formula",
+    "expectValue": 20,
+    "mustUse": [
+      "$"
+    ],
+    "alsoCheck": {
+      "C2": 30,
+      "D3": 80,
+      "B3": 40
+    }
+  },
+  "hints": [
+    "Column A must not drift sideways.",
+    "Row 1 must not drift downward.",
+    "Try =$A2*B$1."
+  ],
+  "explainRules": [
+    "missing-absolute-ref"
+  ],
+  "accepted": [
+    "=$A2*B$1",
+    "=B$1*$A2"
+  ],
+  "xp": 10,
+  "tests": {
+    "correct": [
+      {
+        "B2": "=$A2*B$1"
+      },
+      {
+        "B2": "=B$1*$A2"
+      },
+      {
+        "B2": "=$a2*b$1"
+      }
+    ],
+    "wrong": [
+      {
+        "B2": "=A2*B1"
+      },
+      {
+        "B2": "=$A$2*$B$1"
+      },
+      {
+        "B2": "=A2*B$1"
+      },
+      {
+        "B2": "=$A2*B1"
+      }
+    ]
+  },
+  "functions": [
+    "$"
+  ]
+}
