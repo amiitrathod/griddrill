@@ -1,0 +1,402 @@
+[
+ {
+  "id": "copy",
+  "name": "Copy",
+  "prompt": "Copy the selected cells",
+  "windows": "ctrl+c",
+  "mac": "cmd+c",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Editing"
+ },
+ {
+  "id": "paste",
+  "name": "Paste",
+  "prompt": "Paste what you copied",
+  "windows": "ctrl+v",
+  "mac": "cmd+v",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Editing"
+ },
+ {
+  "id": "cut",
+  "name": "Cut",
+  "prompt": "Cut the selected cells",
+  "windows": "ctrl+x",
+  "mac": "cmd+x",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Editing"
+ },
+ {
+  "id": "undo",
+  "name": "Undo",
+  "prompt": "Undo your last change",
+  "windows": "ctrl+z",
+  "mac": "cmd+z",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Editing"
+ },
+ {
+  "id": "redo",
+  "name": "Redo",
+  "prompt": "Redo what you undid",
+  "windows": "ctrl+y",
+  "mac": "cmd+y",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Editing"
+ },
+ {
+  "id": "select-all",
+  "name": "Select all",
+  "prompt": "Select every cell",
+  "windows": "ctrl+a",
+  "mac": "cmd+a",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Selecting"
+ },
+ {
+  "id": "bold",
+  "name": "Bold",
+  "prompt": "Make the selected cells bold",
+  "windows": "ctrl+b",
+  "mac": "cmd+b",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Formatting"
+ },
+ {
+  "id": "italic",
+  "name": "Italic",
+  "prompt": "Make the selected cells italic",
+  "windows": "ctrl+i",
+  "mac": "cmd+i",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Formatting"
+ },
+ {
+  "id": "underline",
+  "name": "Underline",
+  "prompt": "Underline the selected cells",
+  "windows": "ctrl+u",
+  "mac": "cmd+u",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Formatting"
+ },
+ {
+  "id": "save",
+  "name": "Save",
+  "prompt": "Save the workbook",
+  "windows": "ctrl+s",
+  "mac": "cmd+s",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "File"
+ },
+ {
+  "id": "print",
+  "name": "Print",
+  "prompt": "Open the print window",
+  "windows": "ctrl+p",
+  "mac": "cmd+p",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "File"
+ },
+ {
+  "id": "find",
+  "name": "Find",
+  "prompt": "Open Find",
+  "windows": "ctrl+f",
+  "mac": "cmd+f",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Navigating"
+ },
+ {
+  "id": "replace",
+  "name": "Find and replace",
+  "prompt": "Open Find and Replace",
+  "windows": "ctrl+h",
+  "mac": "ctrl+h",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Navigating"
+ },
+ {
+  "id": "go-to",
+  "name": "Go to",
+  "prompt": "Open the Go To box",
+  "windows": "ctrl+g",
+  "mac": "ctrl+g",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Navigating"
+ },
+ {
+  "id": "fill-down",
+  "name": "Fill down",
+  "prompt": "Copy the cell above into the selected cells",
+  "windows": "ctrl+d",
+  "mac": "cmd+d",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Editing"
+ },
+ {
+  "id": "fill-right",
+  "name": "Fill right",
+  "prompt": "Copy the cell on the left into the selected cells",
+  "windows": "ctrl+r",
+  "mac": "cmd+r",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Editing"
+ },
+ {
+  "id": "edit-cell",
+  "name": "Edit cell",
+  "prompt": "Edit the active cell without clicking it",
+  "windows": "f2",
+  "mac": "ctrl+u",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Editing"
+ },
+ {
+  "id": "abs-ref",
+  "name": "Cycle $ references",
+  "prompt": "Cycle a reference between A1, $A$1, A$1 and $A1 while editing",
+  "windows": "f4",
+  "mac": "cmd+t",
+  "reservedWindows": false,
+  "reservedMac": true,
+  "category": "Formulas"
+ },
+ {
+  "id": "select-column",
+  "name": "Select column",
+  "prompt": "Select the whole column",
+  "windows": "ctrl+space",
+  "mac": "ctrl+space",
+  "reservedWindows": false,
+  "reservedMac": true,
+  "category": "Selecting"
+ },
+ {
+  "id": "select-row",
+  "name": "Select row",
+  "prompt": "Select the whole row",
+  "windows": "shift+space",
+  "mac": "shift+space",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Selecting"
+ },
+ {
+  "id": "jump-down",
+  "name": "Jump to end of data",
+  "prompt": "Jump down to the last filled cell of this column",
+  "windows": "ctrl+down",
+  "mac": "cmd+down",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Navigating"
+ },
+ {
+  "id": "select-down",
+  "name": "Select to end of data",
+  "prompt": "Select from here down to the last filled cell",
+  "windows": "ctrl+shift+down",
+  "mac": "cmd+shift+down",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Selecting"
+ },
+ {
+  "id": "jump-right",
+  "name": "Jump across",
+  "prompt": "Jump right to the last filled cell of this row",
+  "windows": "ctrl+right",
+  "mac": "cmd+right",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Navigating"
+ },
+ {
+  "id": "insert-date",
+  "name": "Insert today's date",
+  "prompt": "Insert today's date into the cell",
+  "windows": "ctrl+;",
+  "mac": "ctrl+;",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Data entry"
+ },
+ {
+  "id": "insert-time",
+  "name": "Insert the time",
+  "prompt": "Insert the current time into the cell",
+  "windows": "ctrl+shift+;",
+  "mac": "cmd+;",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Data entry"
+ },
+ {
+  "id": "autosum",
+  "name": "AutoSum",
+  "prompt": "Insert a SUM formula for the cells above",
+  "windows": "alt+=",
+  "mac": "cmd+shift+t",
+  "reservedWindows": false,
+  "reservedMac": true,
+  "category": "Formulas"
+ },
+ {
+  "id": "insert-row",
+  "name": "Insert row",
+  "prompt": "Insert a new row",
+  "windows": "ctrl+shift+=",
+  "mac": "ctrl+i",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Editing"
+ },
+ {
+  "id": "delete-row",
+  "name": "Delete row",
+  "prompt": "Delete the selected row",
+  "windows": "ctrl+-",
+  "mac": "cmd+-",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Editing"
+ },
+ {
+  "id": "fmt-currency",
+  "name": "Currency format",
+  "prompt": "Format the selected cells as currency",
+  "windows": "ctrl+shift+4",
+  "mac": "ctrl+shift+4",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Formatting"
+ },
+ {
+  "id": "fmt-percent",
+  "name": "Percent format",
+  "prompt": "Format the selected cells as a percentage",
+  "windows": "ctrl+shift+5",
+  "mac": "ctrl+shift+5",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Formatting"
+ },
+ {
+  "id": "fmt-number",
+  "name": "Number format",
+  "prompt": "Format the selected cells as a number with commas",
+  "windows": "ctrl+shift+1",
+  "mac": "ctrl+shift+1",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Formatting"
+ },
+ {
+  "id": "fmt-date",
+  "name": "Date format",
+  "prompt": "Format the selected cells as a date",
+  "windows": "ctrl+shift+3",
+  "mac": "ctrl+shift+3",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Formatting"
+ },
+ {
+  "id": "format-cells",
+  "name": "Format cells",
+  "prompt": "Open the Format Cells box",
+  "windows": "ctrl+1",
+  "mac": "cmd+1",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Formatting"
+ },
+ {
+  "id": "filter",
+  "name": "Toggle filter",
+  "prompt": "Turn filter buttons on or off",
+  "windows": "ctrl+shift+l",
+  "mac": "cmd+shift+f",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Data"
+ },
+ {
+  "id": "show-formulas",
+  "name": "Show formulas",
+  "prompt": "Show formulas instead of results",
+  "windows": "ctrl+`",
+  "mac": "ctrl+`",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Formulas"
+ },
+ {
+  "id": "cancel",
+  "name": "Cancel entry",
+  "prompt": "Cancel what you are typing in a cell",
+  "windows": "escape",
+  "mac": "escape",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Editing"
+ },
+ {
+  "id": "new-line",
+  "name": "New line in a cell",
+  "prompt": "Start a new line inside the same cell",
+  "windows": "alt+enter",
+  "mac": "ctrl+alt+enter",
+  "reservedWindows": false,
+  "reservedMac": false,
+  "category": "Data entry"
+ },
+ {
+  "id": "next-sheet",
+  "name": "Next sheet",
+  "prompt": "Switch to the next sheet",
+  "windows": "ctrl+pagedown",
+  "mac": "ctrl+pagedown",
+  "reservedWindows": true,
+  "reservedMac": true,
+  "category": "Navigating"
+ },
+ {
+  "id": "new-workbook",
+  "name": "New workbook",
+  "prompt": "Create a new workbook",
+  "windows": "ctrl+n",
+  "mac": "cmd+n",
+  "reservedWindows": true,
+  "reservedMac": true,
+  "category": "File"
+ },
+ {
+  "id": "close-workbook",
+  "name": "Close workbook",
+  "prompt": "Close the workbook",
+  "windows": "ctrl+w",
+  "mac": "cmd+w",
+  "reservedWindows": true,
+  "reservedMac": true,
+  "category": "File"
+ }
+]
